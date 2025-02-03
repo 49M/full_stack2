@@ -1,6 +1,8 @@
 { "presets" : [
     [ "@babel/preset-env", {
       "targets" : { "node" : "7" }
-    }]
-  ]
+    }],
+    [ "@babel/preset-react" ]
+  ],
+  "plugins": [ "@babel/plugin-proposal-class-properties" ]
 }
