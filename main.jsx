@@ -4,6 +4,7 @@ function start() {
             super(props);
             console.log("Bookmark component created");
         }
+        static defaultProps = { description : "Unkown" };
         title = this.props.title;
         titleStyle = { color : "blue" }
         render() {
@@ -11,6 +12,7 @@ function start() {
                 <li>
                     <h2 style={this.titleStyle}>{this.title}</h2>
                     <a target="_blank" rel="noopener noreferrer" href={this.props.href}>{this.props.description}</a>
+                    
                     <button onClick={() => {
                         this.title = this.title + "-Changed";
                         this.setState({});
